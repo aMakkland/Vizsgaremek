@@ -62,24 +62,22 @@
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
                     <li class="menu-item active">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('admin_dashboard') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
                     </li>
-
-
                     <li class="menu-header small text-uppercase">
                         <span class="menu-header-text">Category</span>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('add_category') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Add Category</div>
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('admin_dashboard') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">All Category</div>
                         </a>
@@ -88,13 +86,13 @@
                         <span class="menu-header-text">Sub Category</span>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('admin_dashboard') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Add Sub Category</div>
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('admin_dashboard') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">All Sub Category</div>
                         </a>
@@ -103,13 +101,13 @@
                         <span class="menu-header-text">Product</span>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('admin_dashboard') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Add Product</div>
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('admin_dashboard') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">All Product</div>
                         </a>
@@ -118,7 +116,7 @@
                         <span class="menu-header-text">Orders</span>
                     </li>
                     <li class="menu-item">
-                        <a href="" class="menu-link">
+                        <a href="{{ route('admin_dashboard') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Pendeing Orders</div>
                         </a>
