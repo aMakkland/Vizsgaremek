@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'role:user'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -29,13 +29,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
-Route::controller(DashboardController::class)->group(function(){
-    Route::get('/userprofile','Index');
-    Route::get('/userprofile1','Index1');
-    Route::get('/userprofile2','Index2');
-    Route::get('/userprofile3','Index3');
+Route::middleware(['auth', 'role:admin'])->group(function(){
+    Route::controller(DashboardController::class)->group(function(){
+    Route::get('/admin/dashboard', 'Index');
+    
+    });
 });
 
 require __DIR__.'/auth.php';
