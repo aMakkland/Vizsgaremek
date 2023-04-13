@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
+Route::get('dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'role:user'])->name('dashboard');
 
@@ -29,11 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'role:admin'])->group(function(){
+Route::middleware(['auth','role:admin'])->group(function() {
     Route::controller(DashboardController::class)->group(function(){
-    Route::get('/admin/dashboard', 'Index');
-    
-    });
+        Route::get('/admin/dashboard','Index')->name('admindashboard');          
+    });  
 });
 
 require __DIR__.'/auth.php';
