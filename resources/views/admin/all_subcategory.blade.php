@@ -24,16 +24,18 @@
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                        <tr>
-                            <td>1</td>
-                            <td>Fan</td>
-                            <td>Electronics</td>
-                            <td>100</td>
-                            <td>
-                                <a href="" class="btn btn-primary">Edit</a>
-                                <a href="" class="btn btn-danger">Delete</a>
-                            </td>
-                        </tr>
+                        @foreach ($all_subcategories as $sub_category)
+                            <tr>
+                                <td>{{ $sub_category->id }}</td>
+                                <td>{{ $sub_category->category_name }}</td>
+                                <td>{{ $sub_category->subcategory_name }}</td>
+                                <td>{{ $sub_category->product_count }}</td>
+                                <td>
+                                    <a href="" class="btn btn-primary">Edit</a>
+                                    <a href="" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
