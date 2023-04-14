@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubCategoryController;
@@ -50,7 +50,11 @@ Route::middleware(['auth','role:admin'])->group(function() {
     Route::controller(SubCategoryController::class)->group(function(){
         Route::get('/admin/all_subcategory','Index')->name('all_subcategory');          
         Route::get('/admin/add_subcategory','Add_SubCategory')->name('add_subcategory');
-        Route::post('/admin/store_subcategory','Store_SubCategory')->name('store_subcategory');          
+        Route::post('/admin/store_subcategory','Store_SubCategory')->name('store_subcategory'); 
+        Route::get('/admin/edit_subcategory/{id}', 'Edit_SubCategory')->name('edit_subcategory');         
+        Route::get('/admin/delete_subcategory/{id}', 'Delete_SubCategory')->name('delete_subcategory');
+        Route::post('/admin/update_subcategory', 'Update_SubCategory')->name('update_subcategory');
+         
     }); 
 
     Route::controller(ProductController::class)->group(function(){

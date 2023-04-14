@@ -31,8 +31,10 @@
                                 <td>{{ $sub_category->subcategory_name }}</td>
                                 <td>{{ $sub_category->product_count }}</td>
                                 <td>
-                                    <a href="" class="btn btn-primary">Edit</a>
-                                    <a href="" class="btn btn-danger">Delete</a>
+                                    <a href="{{ route('edit_subcategory', $sub_category->id) }}"
+                                        class="btn btn-primary">Edit</a>
+                                    <a href="{{ route('delete_subcategory', $sub_category->id) }}"
+                                        class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
