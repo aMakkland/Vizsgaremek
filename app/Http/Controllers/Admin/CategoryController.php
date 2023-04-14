@@ -10,7 +10,8 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return view('admin.all_category');
+        $categories = Category::latest()->get();
+        return view('admin.all_category', compact('categories'));
     }
 
     public function Add_Category()
@@ -31,4 +32,28 @@ class CategoryController extends Controller
 
         return redirect()->route('all_category')->with('message','Category Added Successfully');
     }
+
+    public function Edit_Category($id)
+    {
+        $category_info = Category::findOrFail($id);
+
+            return view('admin.edit_category', compact('category_info'));
+    }
+
+    public function Update_Category(Request $request)
+    {
+        $category_id = $request->category_id;
+
+
+        $request->validate([
+            'category_name' => 'required|unique:categories'
+        ]);
+
+        Category::findOrFail($category_id)->update([
+            'category_name' => $request->category_name,
+            'slug' => strtolower(str_replace('','-',$request->category_name))
+        ]);
+        return redirect()->route('all_category')->with('message','Category Updated Successfully');
+    }
+    
 }
