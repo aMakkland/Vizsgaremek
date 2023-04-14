@@ -39,22 +39,22 @@ Route::middleware(['auth','role:admin'])->group(function() {
     });
 
     Route::controller(CategoryController::class)->group(function(){
-        Route::get('/admin/all-category','Index')->name('all_category');          
-        Route::get('/admin/all-category','AddCategory')->name('add_category');          
+        Route::get('/admin/all_category','Index')->name('all_category');          
+        Route::get('/admin/add_category','AddCategory')->name('add_category');          
     });  
 
     Route::controller(SubCategoryController::class)->group(function(){
-        Route::get('/admin/all-subcategory','Index')->name('all_subcategory');          
-        Route::get('/admin/all-subcategory','AddCategory')->name('add_subcategory');          
+        Route::get('/admin/all_subcategory','Index')->name('all_subcategory');          
+        Route::get('/admin/add_subcategory','Add_SubCategory')->name('add_subcategory');          
     }); 
 
     Route::controller(ProductController::class)->group(function(){
-        Route::get('/admin/all-product','Index')->name('all_products');          
-        Route::get('/admin/all-product','AddCategory')->name('add_product');          
+        Route::get('/admin/all_products','Index')->name('all_products');          
+        Route::get('/admin/add_product','Add_Product')->name('add_product');          
     });  
 
     Route::controller(OrderController::class)->group(function(){
-        Route::get('/admin/pending-order','Index')->name('pending_order');          
+        Route::get('/admin/pending_order','Index')->name('pending_order');          
                
     });  
 });

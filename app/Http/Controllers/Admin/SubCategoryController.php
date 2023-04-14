@@ -11,7 +11,7 @@ class SubCategoryController extends Controller
     {
         return view('admin.all_subcategory');
     }
-    public function Add_Category()
+    public function Add_SubCategory()
     {
         return view('admin.add_subcategory');
     }
