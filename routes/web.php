@@ -49,7 +49,8 @@ Route::middleware(['auth','role:admin'])->group(function() {
 
     Route::controller(SubCategoryController::class)->group(function(){
         Route::get('/admin/all_subcategory','Index')->name('all_subcategory');          
-        Route::get('/admin/add_subcategory','Add_SubCategory')->name('add_subcategory');          
+        Route::get('/admin/add_subcategory','Add_SubCategory')->name('add_subcategory');
+        Route::post('/admin/store_subcategory','Store_SubCategory')->name('store_subcategory');          
     }); 
 
     Route::controller(ProductController::class)->group(function(){
