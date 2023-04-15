@@ -23,27 +23,26 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Product Price</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="product_name" name="category_name"
-                                    placeholder="12" />
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label">Product Short Description</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label">Product Long Description</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                                <input type="number" class="form-control" id="price" name="price" placeholder="12" />
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Product Quantity</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="product_name" name="category_name"
+                                <input type="number" class="form-control" id="quantity" name="quantity"
                                     placeholder="1000" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Product Short Description</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" name="product_short_desc" id="product_short_desc" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Product Long Description</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" name="product_long_desc" id="product_long_desc" cols="30" rows="10"></textarea>
                             </div>
                         </div>
                         <div class="row mb-3">

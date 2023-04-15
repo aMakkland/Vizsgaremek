@@ -39,7 +39,7 @@ class SubCategoryController extends Controller
             
         ]);
 
-        Category::where('id', $category_id)->increment('sub_category_count',1);
+        Category::where('id', $category_id)->increment('subcategory_count',1);
 
         return redirect()->route('all_subcategory')->with('message','Sub Category Added Successfully!');
     }
