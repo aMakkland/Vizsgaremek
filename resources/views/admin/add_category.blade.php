@@ -12,6 +12,7 @@
                     <small class="text-muted float-end">Input Information</small>
                 </div>
                 <div class="card-body">
+
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -21,6 +22,7 @@
                             </ul>
                         </div>
                     @endif
+
                     <form action="{{ route('store_category') }}" method="POST">
                         @csrf
                         <div class="row mb-3">

@@ -12,11 +12,21 @@
                     <small class="text-muted float-end">Input Information</small>
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form action="{{ route('store_product') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Product Name</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="product_name" name="category_name"
+                                <input type="text" class="form-control" id="product_name" name="product_name"
                                     placeholder="Electronics" />
                             </div>
                         </div>
@@ -60,7 +70,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Select Sub Category </label>
                             <div class="col-sm-10">
-                                <select class="form-select" id="product_category_id" name="product_category_id"
+                                <select class="form-select" id="product_subcategory_id" name="product_subcategory_id"
                                     aria-label="Default select example">
                                     <option selected>Select Product Sub Category</option>
                                     @foreach ($subcategories as $subcategory)
@@ -69,6 +79,7 @@
                                 </select>
                             </div>
                         </div>
+
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label">Upload Product Image</label>
                             <div class="col-sm-10">
