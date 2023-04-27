@@ -3,7 +3,6 @@
     Edit Product - Ecom
 @endsection
 @section('content')
-    <!-- Bootstrap Table with Header - Light -->
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Page/</span>Edit Product</h4>
         <div class="container">
@@ -14,7 +13,7 @@
                         <small class="text-muted float-end">Input information</small>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('updateproduct') }}" method="POST">
+                        <form action="{{ route('update_product') }}" method="POST">
                             @csrf
                             <input type="hidden" value="{{ $product_info->id }}" name="id" />
                             <div class="row mb-3">

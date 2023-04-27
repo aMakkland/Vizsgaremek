@@ -98,7 +98,31 @@ class ProductController extends Controller
     public function Edit_Product($id)
     {
         $product_info = Products::findOrFail($id);
-
+    
         return view('admin.edit_product', compact('product_info'));
+    }
+    
+    public function Update_Product(Request $request)
+    {
+        $product_id = $request->id;
+        
+        $request->validate([
+            'product_name' => 'required|unique:products',
+            'price' => 'required',
+            'quantity' => 'required',
+            'product_short_desc' => 'required',
+            'product_long_desc' => 'required',
+        ]);
+
+        Products::findOrFail($product_id)->update([
+            'product_name' => $request->product_name,
+            'product_short_desc' => $request->product_short_desc,
+            'product_long_desc' => $request->product_long_desc,
+            'price' => $request->price,
+            'quantity' => $request->quantity,
+            'slug' => strtolower(str_replace('','-',$request->product_name)),
+        ]);
+
+        return redirect()->route('all_products')->with('message', 'Product Information Updated Successfully!');
     }
 }
