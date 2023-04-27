@@ -63,7 +63,8 @@ Route::middleware(['auth','role:admin'])->group(function() {
         Route::get('/admin/edit_product_img/{id}','Edit_Product_Img')->name('edit_product_img'); 
         Route::post('/admin/update_product_img','Update_Product_Img')->name('update_product_img');
         Route::get('/admin/edit_product/{id}','Edit_Product')->name('edit_product');
-        Route::post('/admin/update_product', 'Update_Product')->name('update_product');     
+        Route::post('/admin/update_product', 'Update_Product')->name('update_product');
+        Route::get('/admin/delete_product/{id}', 'Delete_Product')->name('delete_product');     
     });  
 
     Route::controller(OrderController::class)->group(function(){

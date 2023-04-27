@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <form action="{{ route('update_product_img') }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            <input type="hidden" value="{{ $productinfo->id }}" name="id" />
+                            <input type="hidden" value="{{ $product_info->id }}" name="id" />
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label" for="basic-default-name">Previous Image</label>
                                 <div class="col-sm-10">
