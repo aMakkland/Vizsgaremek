@@ -1,3 +1,6 @@
+@php
+    $categories = App\Models\Category::latest()->get();
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,12 +88,12 @@
             <div class="container">
                 <div class="containt_main">
                     <div id="mySidenav" class="sidenav">
-                        <a href="{{ asset('home/javascript:void(0)') }}" class="closebtn"
-                            onclick="closeNav()">&times;</a>
-                        <a href="{{ asset('home/index.html') }}">Home</a>
-                        <a href="{{ asset('home/fashion.htm') }}l">Fashion</a>
-                        <a href="{{ asset('home/electronic.html') }}">Electronic</a>
-                        <a href="{{ asset('home/jewellery.html') }}">Jewellery</a>
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="index.html">Home</a>
+                        @foreach ($categories as $category)
+                            <a
+                                href="{{ route('category', [$category->id, $category->slug]) }}">{{ $category->category_name }}</a>
+                        @endforeach
                     </div>
                     <span class="toggle_icon" onclick="openNav()"><img
                             src="{{ asset('home/images/toggle-icon.png') }}"></span>
@@ -99,9 +102,10 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Category
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            @foreach ($categories as $category)
+                                <a class="dropdown-item"
+                                    href="{{ route('category', [$category->id, $category->slug]) }}">{{ $category->category_name }}</a>
+                            @endforeach
                         </div>
                     </div>
                     <div class="main">
@@ -192,7 +196,7 @@
     </div>
     <!-- banner bg main end -->
     <!-- common part -->
-    <div class="container py-5">
+    <div class="container py-5" style="margin-top: 200px">
         @yield('main-content')
     </div>
     <!-- end of common part  -->
