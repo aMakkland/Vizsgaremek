@@ -8,7 +8,7 @@
                 <h1 class="fashion_taital">All Products</h1>
                 <div class="fashion_section_2">
                     <div class="row">
-                        @foreach ($products as $product)
+                        @foreach ($all_products as $product)
                             <div class="col-lg-4 col-sm-4">
                                 <div class="box_main">
                                     <h4 class="shirt_text">{{ $product->product_name }}</h4>
@@ -19,7 +19,10 @@
                                     </div>
                                     <div class="btn_main">
                                         <div class="buy_bt"><a href="#">Buy Now</a></div>
-                                        <div class="seemore_bt"><a href="#">See More</a></div>
+                                        <div class="seemore_bt"><a
+                                                href="{{ route('single_product', [$product->id, $product->slug]) }}">See
+                                                More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +121,8 @@
                                         <h4 class="shirt_text">Computers</h4>
                                         <p class="price_text">Start Price <span style="color: #262626;">$ 100</span>
                                         </p>
-                                        <div class="electronic_img"><img src="{{ asset('home/images/computer-img.png') }}">
+                                        <div class="electronic_img"><img
+                                                src="{{ asset('home/images/computer-img.png') }}">
                                         </div>
                                         <div class="btn_main">
                                             <div class="buy_bt"><a href="#">Buy Now</a></div>

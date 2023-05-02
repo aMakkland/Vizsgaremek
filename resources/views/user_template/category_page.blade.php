@@ -6,7 +6,7 @@
                 <h1 class="fashion_taital">{{ $category->category_name }} - {{ $category->product_count }}</h1>
                 <div class="fashion_section_2">
                     <div class="row">
-                        @foreach ($all_products as $product)
+                        @foreach ($products as $product)
                             <div class="col-lg-4 col-sm-4">
                                 <div class="box_main">
                                     <h4 class="shirt_text">{{ $product->product_name }}</h4>
