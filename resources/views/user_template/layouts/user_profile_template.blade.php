@@ -6,9 +6,9 @@
             <div class="col-lg-4">
                 <div class="box_main">
                     <ul>
-                        <li> <a href="{{ route('user_profile') }}">Dashboard</a></li>
-                        <li> <a href="">Pending Orders</a></li>
-                        <li> <a href="">History</a></li>
+                        <li> <a href="{{ route('Home') }}">Dashboard</a></li>
+                        <li> <a href="{{ route('pending_orders') }}">Pending Orders</a></li>
+                        <li> <a href="{{ route('history') }}">History</a></li>
                         <li> <a href="">Logout</a></li>
                     </ul>
                 </div>

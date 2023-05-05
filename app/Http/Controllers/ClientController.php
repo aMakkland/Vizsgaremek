@@ -28,6 +28,11 @@ class ClientController extends Controller
         return view('user_template.add_to_cart');
     }
 
+    public function Add_Product_To_Cart()
+    {
+        return view('user_template.add_to_cart');
+    }
+
     public function Checkout()
     {
         return view('user_template.checkout');

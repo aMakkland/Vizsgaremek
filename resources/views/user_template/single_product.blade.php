@@ -22,7 +22,7 @@
                         </ul>
                     </div>
                     <div class="btn_main">
-                        <form action="" method="">
+                        <form action="{{ route('add_to_cart') }}" method="POST">
                             @csrf
                             <input type="hidden" value="{{ $product->id }}" name="product_id">
                             <div class="form-group">
