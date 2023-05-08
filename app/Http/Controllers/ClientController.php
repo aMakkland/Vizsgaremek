@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Products;
 use App\Models\Cart;
 use App\Models\ShippingInfo;
+use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
@@ -83,6 +84,34 @@ class ClientController extends Controller
         return view('user_template.checkout', compact('cart_items','shipping_address'));
     }
 
+    public function Place_Order()
+    {
+        $user_id = Auth::id();
+        $shipping_address = ShippingInfo::where('user_id', $user_id)->first();
+        $cart_items = Cart::where('user_id', $user_id)->get();
+
+        foreach ($cart_items as $item) {
+            if(isset($item->quantity) && !empty($item->quantity)) { // check if quantity value is not null or empty
+                Order::insert([
+                    'user_id' => $user_id,
+                    'shipping_phone_number' => $shipping_address->phone_number,
+                    'shipping_city' => $shipping_address->city_name,
+                    'shipping_postal_code' => $shipping_address->postal_code,
+                    'product_id' => $item->product_id,
+                    'quantity' => $item->quantity,
+                    'total_price' => $item->price
+                ]);
+            }
+
+            $id = $item->id;
+            Cart::findOrFail($id)->delete();
+        }
+
+        ShippingInfo::findOrFail($shipping_address->id)->delete();
+
+        return redirect()->route('pending_orders')->with('message', 'Your Order Has Been Placed Successfully');
+    }
+
     public function User_Profile()
     {
         return view('user_template.user_profile');
@@ -90,7 +119,8 @@ class ClientController extends Controller
 
     public function Pending_Orders()
     {
-        return view('user_template.pending_orders');
+        $pending_orders = Order::where('status','pending')->latest()->get();
+        return view('user_template.pending_orders',compact('pending_orders'));
     }
 
     public function History()

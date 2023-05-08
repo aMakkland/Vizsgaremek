@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('shipping_phone_number');
             $table->string('shipping_city');
             $table->string('shipping_postal_code');
-            $table->string('product_name');
+            $table->string('product_id');
             $table->integer('quantity');
             $table->integer('total_price');
             $table->timestamps();

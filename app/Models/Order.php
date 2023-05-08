@@ -13,7 +13,7 @@ class Order extends Model
         'shipping_phone_number',
         'shipping_city',
         'shipping_postal_code',
-        'product_name',
+        'product_id',
         'quantity',
     ];
 }
