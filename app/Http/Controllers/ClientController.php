@@ -76,7 +76,11 @@ class ClientController extends Controller
     
     public function Checkout()
     {
-        return view('user_template.checkout');
+        $user_id = Auth::id();
+        $shipping_address = ShippingInfo::where('user_id', $user_id)->first(); 
+        $cart_items = Cart::where('user_id',$user_id)->get();
+      
+        return view('user_template.checkout', compact('cart_items','shipping_address'));
     }
 
     public function User_Profile()
