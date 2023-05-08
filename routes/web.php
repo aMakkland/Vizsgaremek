@@ -45,7 +45,7 @@ Route::middleware(['auth', 'role:user'])->group(function()
         Route::get('/new_relese','New_Relese')->name('new_relese');
         Route::get('/todays_deal','Todays_Deal')->name('todays_deal');
         Route::get('/custom_service','Customer_Service')->name('custom_service');
-
+        Route::get('/remove_cart_item{id}','Remove_Cart_Item')->name('remove_cart_item');
     });
 });
 Route::get('dashboard', function () {
