@@ -38,16 +38,15 @@
                                 $total = $total + $item->price;
                             @endphp
                         @endforeach
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td>Total</td>
-                            <td>{{ $total }}</td>
-                            @if ($total <= 0)
-                            @else
-                                <td><a href="" class="btn btn-primary">Checkout</a></td>
-                            @endif
-                        </tr>
+                        @if ($total > 0)
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td>Total</td>
+                                <td>{{ $total }}</td>
+                                <td><a href="{{ route('shipping_address') }}" class="btn btn-primary ">Checkout</a></td>
+                            </tr>
+                        @endif
                     </table>
                 </div>
             </div>

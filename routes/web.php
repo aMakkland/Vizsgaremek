@@ -39,6 +39,8 @@ Route::middleware(['auth', 'role:user'])->group(function()
         Route::get('/add_to_cart','Add_To_Cart')->name('add_to_cart');
         Route::post('/add_product_to_cart','Add_To_Product_Cart')->name('add_to_product_cart');
         Route::get('/checkout','Checkout')->name('checkout');
+        Route::get('/shippinng_address','Shipping_Adress')->name('shipping_address');
+        Route::post('/add_shipping_address','Add_Shipping_Address')->name('add_shipping_address');
         Route::get('/user_profile','User_Profile')->name('user_profile');
         Route::get('/user_profile/pending_orders','Pending_Orders')->name('pending_orders');
         Route::get('/user_profile/history','History')->name('history');
