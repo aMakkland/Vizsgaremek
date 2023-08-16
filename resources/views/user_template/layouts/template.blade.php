@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Eflyer</title>
+    <title>E-shop</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -74,16 +74,7 @@
         </div>
         <!-- header top section start -->
         <!-- logo section start -->
-        <div class="logo_section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="logo"><a href="index.html"><img src="{{ asset('home/images/logo.png') }}"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <!-- logo section end -->
         <!-- header section start -->
         <div class="header_section">
@@ -181,8 +172,6 @@
     <!-- footer section start -->
     <div class="footer_section layout_padding">
         <div class="container">
-            <div class="footer_logo"><a href="index.html"><img src="{{ asset('home/images/footer-logo.png') }}"></a>
-            </div>
             <div class="input_bt">
                 <input type="text" class="mail_bt" placeholder="Your Email" name="Your Email">
                 <span class="subscribe_bt" id="basic-addon2"><a href="#">Subscribe</a></span>
