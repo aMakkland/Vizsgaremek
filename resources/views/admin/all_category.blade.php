@@ -4,9 +4,9 @@
 @endsection
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Page/</span> All Category</h4>
+        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Oldal/</span> Összes kategória</h4>
         <div class="card">
-            <h5 class="card-header">Avaible Category Information</h5>
+            <h5 class="card-header">Elérhető kategória információk</h5>
             @if (session()->has('message'))
                 <div class="alert alert-success">
                     {{ \session()->get('message') }}
@@ -16,11 +16,11 @@
                 <table class="table">
                     <thead class="table-light">
                         <tr>
-                            <th>Id</th>
-                            <th>Category Name</th>
-                            <th>Sub Category</th>
-                            <th>Products</th>
-                            <th>Actions</th>
+                            <th>Azonosító</th>
+                            <th>Kategória neve</th>
+                            <th>Alkategória</th>
+                            <th>Termékek</th>
+                            <th>Akciók</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
@@ -31,9 +31,10 @@
                                 <td>{{ $category->sub_category_count }}</td>
                                 <td>{{ $category->slug }}</td>
                                 <td>
-                                    <a href="{{ route('edit_category', $category->id) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ route('edit_category', $category->id) }}"
+                                        class="btn btn-primary">Szerkesztés</a>
                                     <a href="{{ route('delete_category', $category->id) }}"
-                                        class="btn btn-danger">Delete</a>
+                                        class="btn btn-danger">Törlés</a>
                                 </td>
                             </tr>
                         @endforeach

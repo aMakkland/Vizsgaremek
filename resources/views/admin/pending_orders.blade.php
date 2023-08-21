@@ -11,27 +11,27 @@
             <div class="card-body">
                 <table class="table">
                     <tr>
-                        <th>User Id</th>
-                        <th>Shipping Infromation</th>
-                        <th>Product Id</th>
-                        <th>Quantity</th>
-                        <th>Total Will Pay</th>
-                        <th>Action</th>
+                        <th>Felhasználó azonosítója</th>
+                        <th>Szállítási információk</th>
+                        <th>Termék azonosítója</th>
+                        <th>Mennyiség</th>
+                        <th>Összes fizetés</th>
+                        <th>Akció</th>
                     </tr>
                     @foreach ($pending_orders as $order)
                         <tr>
                             <td>{{ $order->user_id }}</td>
                             <td>
                                 <ul>
-                                    <li>Phone Number - {{ $order->shipping_phone_number }}</li>
-                                    <li>City - {{ $order->shipping_city }}</li>
-                                    <li>Postal Code - {{ $order->shipping_postal_code }}</li>
+                                    <li>Telefonszám - {{ $order->shipping_phone_number }}</li>
+                                    <li>Város - {{ $order->shipping_city }}</li>
+                                    <li>Irányítószám - {{ $order->shipping_postal_code }}</li>
                                 </ul>
                             </td>
                             <td>{{ $order->product_id }}</td>
                             <td>{{ $order->quantity }}</td>
                             <td>{{ $order->total_price }}</td>
-                            <td><a href="" class="btn btn-success">Approve Now</a></td>
+                            <td><a href="" class="btn btn-success">Jóváhagyás most</a></td>
                         </tr>
                     @endforeach
             </div>
