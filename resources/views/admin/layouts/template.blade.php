@@ -68,57 +68,57 @@
                         </a>
                     </li>
                     <li class="menu-header small text-uppercase">
-                        <span class="menu-header-text">Category</span>
+                        <span class="menu-header-text">Kategória</span>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('add_category') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Add Category</div>
+                            <div data-i18n="Analytics">Kategória hozzáadása</div>
                         </a>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('all_category') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">All Category</div>
+                            <div data-i18n="Analytics">Összes kategória</div>
                         </a>
                     </li>
                     <li class="menu-header small text-uppercase">
-                        <span class="menu-header-text">Sub Category</span>
+                        <span class="menu-header-text">Alkategória</span>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('add_subcategory') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Add Sub Category</div>
+                            <div data-i18n="Analytics">Alkategória hozzáadása</div>
                         </a>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('all_subcategory') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">All Sub Category</div>
+                            <div data-i18n="Analytics">Összes alkategória</div>
                         </a>
                     </li>
                     <li class="menu-header small text-uppercase">
-                        <span class="menu-header-text">Product</span>
+                        <span class="menu-header-text">Termék</span>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('add_product') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Add Product</div>
+                            <div data-i18n="Analytics">Termék hozzáadása</div>
                         </a>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('all_products') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">All Product</div>
+                            <div data-i18n="Analytics">Összes termék</div>
                         </a>
                     </li>
                     <li class="menu-header small text-uppercase">
-                        <span class="menu-header-text">Orders</span>
+                        <span class="menu-header-text">Megrendelések</span>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route('pending_order') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Pendeing Orders</div>
+                            <div data-i18n="Analytics">Függőben lévő megrendelések</div>
                         </a>
                     </li>
 

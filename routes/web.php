@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
 |
 */
 
@@ -31,7 +28,7 @@ Route::controller(ClientController::class)->group(function()
     Route::get('/product_details/{id}/{slug}','Single_Product')->name('single_product');
     Route::get('/new_relese','New_Relese')->name('new_relese');
 });
-
+/******Felhasználói endpointok *********/
 Route::middleware(['auth', 'role:user'])->group(function()
 {
     Route::controller(ClientController::class)->group(function() 
@@ -60,7 +57,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
+/******Admin endpointok *********/
 Route::middleware(['auth','role:admin'])->group(function() {
     Route::controller(DashboardController::class)->group(function(){
         Route::get('/admin/dashboard','Index')->name('admin_dashboard');          
