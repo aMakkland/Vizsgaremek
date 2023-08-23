@@ -10,7 +10,7 @@
                             <div class="col-lg-4 col-sm-4">
                                 <div class="box_main">
                                     <h4 class="shirt_text">{{ $product->product_name }}</h4>
-                                    <p class="price_text">Price <span
+                                    <p class="price_text">Ár <span
                                             style="color: #262626;">{{ $product->product_price }}</span></p>
                                     <div class="tshirt_img">{{ $product->product_price }}<img
                                             src="{{ asset($product->product_img) }}">
@@ -27,8 +27,8 @@
                                             </form>
                                         </div>
                                         <div class="seemore_bt"><a
-                                                href="{{ route('single_product', [$product->id, $product->slug]) }}">See
-                                                More</a></div>
+                                                href="{{ route('single_product', [$product->id, $product->slug]) }}">Mutass
+                                                többet</a></div>
                                     </div>
                                 </div>
                             </div>

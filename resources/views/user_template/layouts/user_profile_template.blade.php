@@ -6,10 +6,15 @@
             <div class="col-lg-4">
                 <div class="box_main">
                     <ul>
-                        <li> <a href="{{ route('Home') }}">Dashboard</a></li>
-                        <li> <a href="{{ route('pending_orders') }}">Pending Orders</a></li>
-                        <li> <a href="{{ route('history') }}">History</a></li>
-                        <li> <a href="">Logout</a></li>
+                        <li> <a href="{{ route('Home') }}">Kezdőoldal</a></li>
+                        <li> <a href="{{ route('pending_orders') }}">Függőben lévő rendelés</a></li>
+                        <li> <a href="{{ route('history') }}">Vásárlási előzmények</a></li>
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit">Kijelentkezés</button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>

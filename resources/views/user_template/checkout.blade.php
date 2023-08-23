@@ -4,22 +4,22 @@
     <div class="row">
         <div class="col-8">
             <div class="box_main">
-                <h3>Product Will Send At</h3>
-                <p>City/Village {{ $shipping_address->city_name }}</p>
-                <p>Postal Code {{ $shipping_address->postal_code }}</p>
-                <p>Phone Number {{ $shipping_address->phone_number }}</p>
+                <h3>A terméket a következő címre küldjük:</h3>
+                <p>Város/Falu {{ $shipping_address->city_name }}</p>
+                <p>Irányítószám {{ $shipping_address->postal_code }}</p>
+                <p>Telefonszám {{ $shipping_address->phone_number }}</p>
 
             </div>
         </div>
         <div class="col-4">
             <div class="box_main">
-                <h3>Your Final Products Are </h3>
+                <h3>Az ön termékei </h3>
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
-                            <th>Product Name</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
+                            <th>Termék neve</th>
+                            <th>mennyiség</th>
+                            <th>Ár</th>
                         </tr>
                         @php
                             $total = 0;
@@ -39,7 +39,7 @@
                         @endforeach
                         <tr>
                             <td></td>
-                            <td>Total</td>
+                            <td>Összes</td>
                             <td>{{ $total }}</td>
                         </tr>
                     </table>
