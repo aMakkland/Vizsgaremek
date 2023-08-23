@@ -12,11 +12,11 @@
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
-                            <th>Product Image</th>
-                            <th>Product Name</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Action</th>
+                            <th>Termék kép</th>
+                            <th>Termék neve</th>
+                            <th>Mennyiség</th>
+                            <th>Ár</th>
+                            <th>Akció</th>
                         </tr>
                         @php
                             $total = 0;
@@ -31,7 +31,7 @@
                                 <td>{{ $product_name }}</td>
                                 <td>{{ $item->quantity }}</td>
                                 <td>{{ $item->price }}</td>
-                                <td><a href="{{ route('remove_cart_item', $item->id) }}" class="btn btn-warning">Remove</a>
+                                <td><a href="{{ route('remove_cart_item', $item->id) }}" class="btn btn-warning">Vissza</a>
                                 </td>
                             </tr>
                             @php
@@ -42,9 +42,9 @@
                             <tr>
                                 <td></td>
                                 <td></td>
-                                <td>Total</td>
+                                <td>Összes</td>
                                 <td>{{ $total }}</td>
-                                <td><a href="{{ route('shipping_address') }}" class="btn btn-primary ">Checkout</a></td>
+                                <td><a href="{{ route('shipping_address') }}" class="btn btn-primary ">Kosár</a></td>
                             </tr>
                         @endif
                     </table>

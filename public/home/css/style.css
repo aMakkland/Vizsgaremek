@@ -211,14 +211,6 @@ button {
 
 /* banner bg main start */
 
-.banner_bg_main {
-    width: 100%;
-    float: left;
-    background-image: url(../images/xmn.jpg);
-    height: auto;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
 
 
 /* banner bg main end */
@@ -226,62 +218,49 @@ button {
 
 /* header top section start */
 
-.header_section_top {
-    width: 100%;
-    float: left;
-    background-color: #2b2a29;
-    clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
-    height: auto;
-    padding: 10px 0px;
-}
-
 .custom_menu {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
 }
 
 .custom_menu ul {
-    margin: 0px;
-    padding: 0px;
-    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
 .custom_menu li {
-    float: left;
-    font-size: 16px;
-    color: #f1f1f1;
-    padding: 6px 10px 0px 10px;
+    margin: 0;
 }
 
-.custom_menu li a {
-    color: #f1f1f1;
+.custom_menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
 }
 
-.custom_menu li a:hover {
-    color: #f26522;
+.custom_menu_button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom_menu_button:hover {
+    background-color: #ff3300;
+    border-radius: 10px;
 }
 
 
 /* header top section end */
-
-
-/* logo section start */
-
-.logo_section {
-    width: 100%;
-    float: left;
-}
-
-.logo {
-    width: 100%;
-    float: left;
-    text-align: center;
-    padding: 30px 0px;
-}
-
-
-/* logo section end */
 
 
 /* header section start */
@@ -297,6 +276,14 @@ button {
 
 
 /* opennav bar start */
+
+.sidebar_toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
 
 .sidenav {
     height: 100%;
@@ -314,8 +301,8 @@ button {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 20px;
-    color: #ffffff;
+    font-size: 25px;
+    color: #818181;
     display: block;
     transition: 0.3s;
 }
@@ -341,46 +328,6 @@ button {
         font-size: 18px;
     }
 }
-
-.toggle_icon {
-    cursor: pointer;
-    color: #ffffff;
-    order: 2;
-}
-
-.header_box {
-    order: 2;
-    display: flex;
-}
-
-.dropdown,
-.dropleft,
-.dropright,
-.dropup {
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-    display: inline-block;
-    margin-left: 30px;
-    order: 2;
-}
-
-.btn-secondary {
-    color: #fff;
-    background-color: #30302e;
-    border-color: #30302e;
-}
-
-.btn-secondary:hover {
-    color: #fff;
-    background-color: #30302e;
-    border-color: #30302e;
-}
-
-.show>.btn-secondary.dropdown-toggle:focus {
-    box-shadow: none;
-}
-
 
 /* opennav bar end */
 
@@ -416,36 +363,11 @@ button {
 
 /* Styles for wrapping the search box end */
 
-.login_menu {
-    display: flex;
-    text-align: right;
+
+
+.image_container {
     float: right;
-}
-
-.login_menu ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-.login_menu li {
-    float: left;
-    font-size: 16px;
-    color: #ffffff;
-    text-transform: uppercase;
-    padding-left: 10px;
-    padding-top: 4px;
-}
-
-.login_menu li a {
-    color: #ffffff;
-}
-
-.login_menu li a:hover {
-    color: #f26522;
-}
-
-.padding_10 {
-    padding-left: 10px;
+    margin-left: 10px;
 }
 
 
@@ -718,100 +640,6 @@ a:hover {
 
 /* electronic section end */
 
-
-/* jewellery section start */
-
-.jewellery_section {
-    width: 100%;
-    float: left;
-    padding-bottom: 50px;
-}
-
-.jewellery_img {
-    width: 100%;
-    text-align: center;
-    margin: 50px 0px;
-    min-height: 293px;
-}
-
-#jewellery_main_slider a.carousel-control-next {
-    right: 615px;
-    top: 75%;
-}
-
-#jewellery_main_slider a.carousel-control-prev {
-    left: 615px;
-    top: 75%;
-}
-
-#jewellery_main_slider .carousel-control-next,
-#jewellery_main_slider .carousel-control-prev {
-    width: 55px;
-    height: 55px;
-    background-color: #30302e;
-    opacity: 1;
-    font-size: 30px;
-    color: #ffffff;
-}
-
-#jewellery_main_slider .carousel-control-next:focus,
-#jewellery_main_slider .carousel-control-next:hover,
-#jewellery_main_slider .carousel-control-prev:focus,
-#jewellery_main_slider .carousel-control-prev:hover {
-    color: #fff;
-    background-color: #f26522;
-}
-
-
-/* loader bar css start */
-
-.loader_main {
-    width: 100%;
-    text-align: center;
-    margin-top: 140px;
-}
-
-.loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #414744;
-    border-right: 16px solid #f26522;
-    border-bottom: 16px solid #414744;
-    border-left: 16px solid #f26522;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 6s linear infinite;
-    margin: 0 auto;
-}
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-
-/* loader bar css end */
-
-
-/* jewellery section end */
-
-
 /* footer section start */
 
 
@@ -958,3 +786,18 @@ input.mail_bt::placeholder {
 
 
 /* copyright section end */
+
+/* custom service */
+.custom_service {
+    text-align: center;
+}
+
+.custom_service img {
+    display: inline-block;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* custom service end*/
