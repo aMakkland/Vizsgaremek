@@ -45,59 +45,6 @@
     <!-- fashion section end -->
 
     <!-- electronic section start -->
-    <div class="fashion_section">
-        <div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <h1 class="fashion_taital">Elektronika</h1>
-                        <div class="fashion_section_2">
-                            <div class="row">
-                                <div class="col-lg-4 col-sm-4">
-                                    <div class="box_main">
-                                        <h4 class="shirt_text">Laptop</h4>
-                                        <p class="price_text">Kezdő ár <span style="color: #262626;">$ 100</span>
-                                        </p>
-                                        <div class="electronic_img"><img src="{{ asset('home/images/laptop-img.png') }}">
-                                        </div>
-                                        <div class="btn_main">
-                                            <input class="btn btn-warning" type="submit" value="Vásárlás">
-                                            <div class="seemore_bt"><a href="#">Mutass többet</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-sm-4">
-                                    <div class="box_main">
-                                        <h4 class="shirt_text">Mobil</h4>
-                                        <p class="price_text">Kezdő ár <span style="color: #262626;">$ 100</span>
-                                        </p>
-                                        <div class="electronic_img"><img src="{{ asset('home/images/mobile-img.png') }}">
-                                        </div>
-                                        <div class="btn_main">
-                                            <input class="btn btn-warning" type="submit" value="Vásárlás">
-                                            <div class="seemore_bt"><a href="#">Mutass többet</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-sm-4">
-                                    <div class="box_main">
-                                        <h4 class="shirt_text">Asztali számítógépek</h4>
-                                        <p class="price_text">Kezdő ár <span style="color: #262626;">$ 100</span>
-                                        </p>
-                                        <div class="electronic_img"><img src="{{ asset('home/images/computer-img.png') }}">
-                                        </div>
-                                        <div class="btn_main">
-                                            <input class="btn btn-warning" type="submit" value="Vásárlás">
-                                            <div class="seemore_bt"><a href="#">Mutass többet</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- electronic section end -->
 @endsection

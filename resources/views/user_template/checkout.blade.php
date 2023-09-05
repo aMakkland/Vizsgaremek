@@ -1,13 +1,14 @@
 @extends('user_template.layouts.template')
 @section('main-content')
-    <h2>Final Step To Place To Order</h2>
+    <h2>Utólsó lépés a rendelés megerősítéséhez</h2>
     <div class="row">
         <div class="col-8">
             <div class="box_main">
                 <h3>A terméket a következő címre küldjük:</h3>
-                <p>Város/Falu {{ $shipping_address->city_name }}</p>
-                <p>Irányítószám {{ $shipping_address->postal_code }}</p>
-                <p>Telefonszám {{ $shipping_address->phone_number }}</p>
+                <p> {{ $shipping_address->user_id }}</p>
+                <p> {{ $shipping_address->city_name }}</p>
+                <p> {{ $shipping_address->postal_code }}</p>
+                <p> {{ $shipping_address->phone_number }}</p>
 
             </div>
         </div>
@@ -49,12 +50,12 @@
 
         <form action="" method="POST">
             @csrf
-            <input type="submit" value="Cancel Order" class="btn btn-danger mr-3">
+            <input type="submit" value="Rendelés törlése" class="btn btn-danger mr-3">
         </form>
 
         <form action="{{ route('palce_order') }}" method="POST">
             @csrf
-            <input type="submit" value="Place Order" class="btn btn-primary ">
+            <input type="submit" value="Rendelés megerősítése" class="btn btn-primary ">
         </form>
     </div>
 @endsection
