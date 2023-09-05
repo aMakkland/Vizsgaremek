@@ -23,7 +23,7 @@
                                                 <input type="hidden" value="{{ $product->price }}" name="price">
                                                 <input type="hidden" value="1" name="quantity">
                                                 <br>
-                                                <input class="btn btn-warning" type="submit" value="Buy Now">
+                                                <input class="btn btn-warning" type="submit" value="Vásárlás">
                                             </form>
                                         </div>
                                         <div class="seemore_bt"><a

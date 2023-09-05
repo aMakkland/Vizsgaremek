@@ -32,7 +32,7 @@
 
                             </div>
                             <br>
-                            <input class="btn btn-warning" type="submit" value="Add To Cart">
+                            <input class="btn btn-warning" type="submit" value="Kosárba">
                         </form>
                     </div>
                 </div>
