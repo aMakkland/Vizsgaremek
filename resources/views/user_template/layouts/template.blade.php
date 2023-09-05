@@ -77,7 +77,6 @@
                                     <li><a href="{{ route('new_relese') }}">Újdonságok</a></li>
                                     <li><a href="{{ route('todays_deal') }}">Napi ajánlat</a></li>
                                     <li><a href="{{ route('custom_service') }}">Vevőszolgálat</a></li>
-                                    <li><a href="{{ route('checkout') }}">Pénztár</a></li>
                                     @auth
                                         <li>
                                             <form action="{{ route('logout') }}" method="POST">

@@ -21,7 +21,7 @@
                         <label for="postal_code">Irányítószám</label>
                         <input type="text" class="form-control" name="postal_code">
                     </div>
-                    <input type="submit" value="Next" class="btn btn-primary">
+                    <input type="submit" value="Következő" class="btn btn-primary">
                 </form>
             </div>
         </div>

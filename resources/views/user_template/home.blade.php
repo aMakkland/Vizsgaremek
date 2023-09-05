@@ -29,8 +29,7 @@
                                             </form>
                                         </div>
                                         <div class="seemore_bt"><a
-                                                href="{{ route('single_product', [$product->id, $product->slug]) }}">Mutass
-                                                többet</a>
+                                                href="{{ route('single_product', [$product->id, $product->slug]) }}">Megtekintés</a>
                                         </div>
 
                                     </div>
