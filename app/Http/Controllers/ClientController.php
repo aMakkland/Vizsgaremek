@@ -46,14 +46,14 @@ class ClientController extends Controller
             'price' => $price
         ]);
 
-        return redirect()->route('add_to_cart')->with('message', 'Your item added successfully!');
+        return redirect()->route('add_to_cart')->with('message', 'A terméket hozzá adtuk a kosárhoz!');
     }
 
     public function Remove_Cart_Item ($id)
     {
         Cart::findOrFail($id)->delete();
 
-        return redirect()->route('add_to_cart')->with('message', 'Your item removed successfully!');
+        return redirect()->route('add_to_cart')->with('message', 'A terméket sikeresen töröltük a kosárból!');
     }
 
     public function Shipping_Adress()
